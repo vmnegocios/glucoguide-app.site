@@ -57,7 +57,7 @@
     <!-- Live Badge -->
     <div class="live-badge">
       <div class="red-dot"></div>
-      VIVIR
+      VIVIR | <span id="viewerCount" class="ml-1"></span> <span class="ml-1">espectadores</span>
     </div>
     <div id="vid_67100eb45a2bc3000b632c5f" style="position:absolute;top:0;left:0;width:100%;height:100%;">
       <img id="thumb_67100eb45a2bc3000b632c5f" src="https://images.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/67100eb45a2bc3000b632c5f/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
@@ -74,36 +74,31 @@
    <!-- Video Details -->
    <div class="p-4">
     <h1 class="text-white text-lg font-bold">¡Doctor revelará cómo revertir la diabetes!<span class="text-orange-500">🔥</span></h1>    
-
-    <!-- Live viewers count -->
-    <div class="text-left mt-2">
-      <span id="viewerCount" class="text-white text-sm font-bold"></span>
-      <span class="text-gray-400 text-sm">espectadores</span>
-    </div>
    </div>
 
    <!-- Channel Info -->
-   <div class="flex items-center justify-between p-4">
-    <div class="flex items-center">
+   <div class="flex items-center p-4">
+     <!-- Channel Image and Info -->
      <img alt="Channel profile picture" class="rounded-full" height="40" src="images/logomassalud.jpg" width="40"/>
      <div class="ml-2">
       <p class="text-white text-sm font-bold">Podcast Más Salud</p>
       <p class="text-gray-400 text-xs">96,54 mil</p>
      </div>
-    </div>
-    <button class="bg-white text-black text-sm font-bold px-4 py-2 rounded">Inscribirse</button>
+     <!-- Inscribirse Button aligned after channel info -->
+     <button class="bg-white text-black text-sm font-bold px-4 py-2 rounded ml-4">Inscribirse</button>
    </div>
+
   </div>
 
   <script>
     // Function to generate random number of viewers
     function updateViewerCount() {
-      var viewers = Math.floor(Math.random() * (1100 - 700 + 1)) + 700;
+      var viewers = Math.floor(Math.random() * (1400 - 1200 + 1)) + 1200;
       document.getElementById('viewerCount').innerText = viewers;
     }
 
-    // Update viewers count every 5 seconds
-    setInterval(updateViewerCount, 3000);
+    // Update viewers count
+    setInterval(updateViewerCount, 2550);
 
     // Initial viewers count
     updateViewerCount();
