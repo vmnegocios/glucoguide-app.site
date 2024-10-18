@@ -1,0 +1,112 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .live-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .live-badge .red-dot {
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      border-radius: 50%;
+      margin-right: 5px;
+      animation: blink 2s infinite;
+    }
+
+    /* Keyframes for blinking effect */
+    @keyframes blink {
+      0%, 50%, 100% {
+        opacity: 1;
+      }
+      25%, 75% {
+        opacity: 0;
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-black text-white font-sans">
+  <div class="w-full max-w-7xl mx-auto"> <!-- Ajuste para telas grandes -->
+   <!-- Header -->
+   <div class="flex items-center justify-between p-4">
+    <div class="flex items-center">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/YouTube_dark_logo_2017.svg/320px-YouTube_dark_logo_2017.svg.png" alt="YouTube Logo" class="h-8"/>
+    </div>
+    <div class="flex items-center space-x-4">
+     <i class="fas fa-search text-white text-xl"></i>
+     <i class="fas fa-ellipsis-v text-white text-xl"></i>
+    </div>
+   </div>
+   
+   <!-- Video Section (substitute with VTurb JS) -->
+   <div class="relative w-full" style="padding-bottom: 56.25%; position: relative;">
+    <!-- Live Badge -->
+    <div class="live-badge">
+      <div class="red-dot"></div>
+      VIVIR
+    </div>
+    <div id="vid_67100eb45a2bc3000b632c5f" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      <img id="thumb_67100eb45a2bc3000b632c5f" src="https://images.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/67100eb45a2bc3000b632c5f/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+      <div id="backdrop_67100eb45a2bc3000b632c5f" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
+    </div>
+    <script type="text/javascript" id="scr_67100eb45a2bc3000b632c5f"> 
+      var s=document.createElement("script"); 
+      s.src="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/67100eb45a2bc3000b632c5f/player.js", 
+      s.async=!0,document.head.appendChild(s); 
+    </script>
+    <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
+   </div>
+
+   <!-- Video Details -->
+   <div class="p-4">
+    <h1 class="text-white text-lg font-bold">¡Doctor revelará cómo revertir la diabetes!<span class="text-orange-500">🔥</span></h1>    
+
+    <!-- Live viewers count -->
+    <div class="text-left mt-2">
+      <span id="viewerCount" class="text-white text-sm font-bold"></span>
+      <span class="text-gray-400 text-sm">espectadores</span>
+    </div>
+   </div>
+
+   <!-- Channel Info -->
+   <div class="flex items-center justify-between p-4">
+    <div class="flex items-center">
+     <img alt="Channel profile picture" class="rounded-full" height="40" src="images/logomassalud.jpg" width="40"/>
+     <div class="ml-2">
+      <p class="text-white text-sm font-bold">Podcast Más Salud</p>
+      <p class="text-gray-400 text-xs">96,54 mil</p>
+     </div>
+    </div>
+    <button class="bg-white text-black text-sm font-bold px-4 py-2 rounded">Inscribirse</button>
+   </div>
+  </div>
+
+  <script>
+    // Function to generate random number of viewers
+    function updateViewerCount() {
+      var viewers = Math.floor(Math.random() * (1100 - 700 + 1)) + 700;
+      document.getElementById('viewerCount').innerText = viewers;
+    }
+
+    // Update viewers count every 5 seconds
+    setInterval(updateViewerCount, 3000);
+
+    // Initial viewers count
+    updateViewerCount();
+  </script>
+ </body>
+</html>
